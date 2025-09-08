@@ -1,0 +1,70 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1e1e2f, #2d2d44);
+    color: #fff;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 2rem 0;
+    color: #ffffff;
+    text-shadow: 0px 3px 8px rgba(0, 0, 0, 0.5);
+    letter-spacing: 2px;
+}
+
+
+.produtos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    padding: 2rem;
+    list-style: none;
+}
+
+.produto {
+    background: #2a2a3d;
+    border-radius: 20px;
+    overflow: hidden;
+    width: 260px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.produto:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.6);
+}
+
+
+.imagemproduto img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+
+.nomeproduto {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #e5e7eb; 
+    text-align: center;
+    margin: 1rem 0 0.5rem;
+}
+
+
+.precoproduto {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #3b82f6;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+
