@@ -1,70 +1,144 @@
-
+/* Global */
 body {
     margin: 0;
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #1e1e2f, #2d2d44);
-    color: #fff;
-}
-
-h1 {
+    background-color: #f8f9fa; /* off-white neutro */
+    color: #333;
+  }
+  
+  /* Título da página */
+  h1 {
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 2.4rem;
     margin: 2rem 0;
-    color: #ffffff;
-    text-shadow: 0px 3px 8px rgba(0, 0, 0, 0.5);
-    letter-spacing: 2px;
-}
-
-
-.produtos {
+    color: #008C95;
+    letter-spacing: 1px;
+  }
+  
+  /* Container de produtos */
+  .produtos {
     display: flex;
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: 1.5rem;
     justify-content: center;
     padding: 2rem;
-    list-style: none;
-}
-
-.produto {
-    background: #2a2a3d;
-    border-radius: 20px;
-    overflow: hidden;
+  }
+  
+  /* Cartão de produto com detalhes */
+  .produto {
+    background-color: #fff;
+    border: 1px solid #008C95;
+    border-radius: 10px;
     width: 260px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    box-shadow: inset 0 0 0 1px rgba(0, 140, 149, 0.2), 0 4px 12px rgba(0,0,0,0.1);
+    overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
-}
-
-.produto:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.6);
-}
-
-
-.imagemproduto img {
+  }
+  
+  .produto:hover {
+    transform: translateY(-6px);
+    box-shadow: inset 0 0 0 1px rgba(0, 140, 149, 0.4), 0 12px 24px rgba(0,0,0,0.15);
+  }
+  
+  /* Imagem do produto */
+  .imagemproduto {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .imagemproduto img {
     width: 100%;
-    height: auto;
     display: block;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
-}
-
-
-.nomeproduto {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #e5e7eb; 
+  }
+  
+  .imagemproduto::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, #008C95, transparent);
+  }
+  
+  /* Nome do produto */
+  .nomeproduto {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #222;
     text-align: center;
     margin: 1rem 0 0.5rem;
-}
-
-
-.precoproduto {
+  }
+  
+  /* Preço do produto */
+  .precoproduto {
     font-size: 1.2rem;
     font-weight: bold;
-    color: #3b82f6;
+    color: #008C95;
     text-align: center;
     margin-bottom: 1rem;
-}
-
-
+  }
+  
+  /* Botão elegante */
+  .button {
+    background-color: #008C95;
+    color: #fff;
+    border: none;
+    padding: 0.75rem;
+    margin: 0 auto 1.2rem;
+    width: 85%;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .button:hover {
+    background-color: #006f77;
+    transform: scale(1.04);
+  }
+  
+  /* Responsividade */
+  @media (max-width: 600px) {
+    .produtos {
+      gap: 1rem;
+      padding: 1rem;
+    }
+  
+    .produto {
+      width: 100%;
+      max-width: 300px;
+    }
+  }
+/* Tooltip Container */
+.produto .tooltip-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Balão de Promoção */
+  .produto .tooltip-container .tooltip-text {
+    visibility: hidden;
+    background-color: #008C95;
+    color: white;
+    font-size: 0.9rem;
+    padding: 4px 6px;
+    border-radius: 4px;
+    position: absolute;
+    top: 50%;
+    left: 105%;
+    transform: translateY(-50%);
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    z-index: 10;
+  }
+  
+  .produto .tooltip-container:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+  }
+  
