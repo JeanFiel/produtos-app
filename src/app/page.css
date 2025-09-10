@@ -76,7 +76,7 @@ body {
     font-size: 1.2rem;
     font-weight: bold;
     color: #008C95;
-    text-align: center;
+    text-align:end;
     margin-bottom: 1rem;
   }
   
@@ -142,3 +142,28 @@ body {
     opacity: 1;
   }
   
+  /* Header container */
+
+
+/* Logo */
+.Logo {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Title */
+.titleHeader {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5rem;
+  color: #fff;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.Menu{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size:medium;
+  color: #fff;
+}
