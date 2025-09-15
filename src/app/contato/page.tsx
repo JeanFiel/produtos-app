@@ -2,7 +2,7 @@
 
 import Textfield from "@/components/TextField";
 import styles from "./styles.module.css";
-
+import Header from "@/components/Header";
 
 
 export default function Contato() {
@@ -35,7 +35,7 @@ export default function Contato() {
 
 
     return (
-        
+        <>
         <div className={styles.container}>
             <h1 className={styles.title}>Contato</h1>
             <form className={styles.form}>
@@ -44,34 +44,36 @@ export default function Contato() {
                     type="text"
                     multiline={false}
                     onChange={handleNomeChange}
-                />
+                    />
                 <Textfield
                     label="Email"
                     type="email"
                     multiline={false}
                     onChange={handleEmailChange}
-                />
+                    />
                 <Textfield
                     label="Assunto"
                     type="text"
                     multiline={false}
                     onChange={handleAssuntoChange}
-                />
+                    value="Texto padrão"
+                    />
                 <Textfield
                     label="Mensagem"
                     type="text"
                     multiline={true}
                     onChange={handleMensagemChange}
-                />
+                    />
 
                 <button 
                     className={styles.button} 
                     onClick={botaoEnviarOnclick}
-                >
+                    >
                     Enviar
                     </button> 
                 </form>
             </div>
+                    </>
         );
 }
     

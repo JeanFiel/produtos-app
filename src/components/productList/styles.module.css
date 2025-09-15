@@ -1,6 +1,13 @@
 .productList {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
-
-}
+    justify-content: space-between;
+  }
+  
+  .productItem {
+    flex: 0 0 20%;      
+    max-width: 20%;    
+    box-sizing: border-box;
+    margin-bottom: 20px;
+  }
+  

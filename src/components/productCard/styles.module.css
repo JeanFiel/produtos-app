@@ -29,7 +29,7 @@
     display: block;
   }
   
-  /* pequeno destaque inferior */
+
   .imagemproduto::after {
     content: '';
     position: absolute;
@@ -40,7 +40,7 @@
     background: linear-gradient(90deg, transparent, #008C95, transparent);
   }
   
-  /* texto */
+
   .nomeproduto {
     font-size: 1.05rem;
     font-weight: 600;
@@ -50,7 +50,7 @@
     padding: 0 12px;
   }
   
-  /* rodapé do cartão */
+ 
   .footer {
     display: flex;
     align-items: center;
@@ -65,7 +65,7 @@
     color: #008C95;
   }
   
-  /* botão */
+
   .button {
     background-color: #008C95;
     color: #fff;
@@ -82,36 +82,17 @@
     background-color: #006f77;
     transform: translateY(-2px);
   }
-  
-  /* Tooltip / balão de promoção */
-  .tooltipContainer {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    pointer-events: none;
-  }
-  
-  .tooltipText {
-    display: inline-block;
-    background-color: #008C95;
-    color: #fff;
-    font-size: 0.8rem;
-    padding: 4px 6px;
-    border-radius: 4px;
-    white-space: nowrap;
-  }
 
-  /* Lista de produtos */
   .produtos {
     display: flex;
     flex-wrap: wrap;
     gap: 1.5rem;
-    justify-content: center; /* centraliza os itens */
+    justify-content: center; 
     padding: 2rem;
     list-style: none;
   }  
 
-/* Cada cartão */
+
 .produto {
   background-color: #fff;
   border: 1px solid #008C95;

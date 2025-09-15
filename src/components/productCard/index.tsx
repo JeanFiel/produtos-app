@@ -27,10 +27,6 @@ export default function ProductCard(props: Props) {
         <span className={styles.precoproduto}>R$ {props.preco}</span>
         <button className={styles.button}>Comprar</button>
       </div>
-
-      <div className={styles.tooltipContainer}>
-        <span className={styles.tooltipText}>Promoção!</span>
-      </div>
     </li>
   );
 }
