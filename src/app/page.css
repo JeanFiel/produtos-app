@@ -1,17 +1,20 @@
 /* Global */
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f8f9fa; /* off-white neutro */
-    color: #333;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #0f172a; /* fundo escuro elegante */
+  color: #e2e8f0;      /* texto claro */
+  line-height: 1.6;
+}
 
-  }
-
+/* Container da página */
 .pageContainer {
   display: flex;
   flex-direction: column;
-  justify-content: center; /* centraliza verticalmente */
-  align-items: center;     /* centraliza horizontalmente */
-  min-height: 100vh;       /* ocupa a tela inteira */
+  justify-content: center;  /* centraliza verticalmente */
+  align-items: center;      /* centraliza horizontalmente */
+  min-height: 100vh;        /* ocupa a tela inteira */
+  padding: 2rem;
+  background: radial-gradient(circle at top, #1e293b 0%, #0f172a 100%);
 }

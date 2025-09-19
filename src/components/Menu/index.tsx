@@ -6,20 +6,20 @@ export default function Menu() {
       <a href="#lancamentos" className={styles.menuItem}>
         Lançamentos
       </a>
-      <a href="#linha-bateria" className={styles.menuItem}>
-        Linha Bateria
+      <a href="#Videogames" className={styles.menuItem}>
+        Videogames
       </a>
-      <a href="#linha-eletrica" className={styles.menuItem}>
-        Linha Elétrica
+      <a href="#Notebooks" className={styles.menuItem}>
+        Notebooks
       </a>
-      <a href="#jardim-floresta" className={styles.menuItem}>
-        Jardim/Floresta
+      <a href="#Periféricos" className={styles.menuItem}>
+        Periféricos
       </a>
-      <a href="#limpeza-profissional" className={styles.menuItem}>
-        Limpeza Profissional
+      <a href="#limpeza e Manutenção" className={styles.menuItem}>
+        Limpeza e Manutenção
       </a>
-      <a href="#acessorios" className={styles.menuItem}>
-        Acessórios
+      <a href="/adicionarProduto" className={styles.menuItem}>
+        Adicionar Produto
       </a>
       <a href="/contato" className={styles.menuItem} >Contato</a>
     </nav>

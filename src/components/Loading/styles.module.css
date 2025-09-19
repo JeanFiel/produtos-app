@@ -1,0 +1,13 @@
+.loadingContainer {
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    background-color: #008b9534;
+}
+
