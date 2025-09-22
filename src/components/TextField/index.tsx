@@ -5,7 +5,7 @@ import React from "react";
 
 type Props = {
   label: string;
-  type: "text" | "email";
+  type: "text" | "email" | "password" | "number" | "date" | "url";
   multiline?: boolean;
   onChange?(texto: string): void;
   value?: string;
@@ -13,8 +13,8 @@ type Props = {
 
 export default function Textfield(props: Props) {
 
-  const [texto, setTexto] = React.useState(props.value ? props.value : "");
-
+  const [texto, setTexto] = React.useState("");
+  
 
   function handleChange(e: ChangeEvent<HTMLInputElement>) {
     setTexto(e.target.value);

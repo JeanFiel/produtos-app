@@ -1,13 +1,16 @@
-.loadingContainer {
-    font-size: 24px;
-    color: #333;
-    text-align: center;
-    margin-top: 20px;
-}
+.root{
+    /* width: 100vw;
+    height: 100vh; */
+    background-color: #38bff863;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 
-.container{
-    width: 100vw;
-    height: 100vh;
-    background-color: #008b9534;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
 }
 

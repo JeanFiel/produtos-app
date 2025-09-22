@@ -4,6 +4,8 @@ import ProductList from "@/components/ProductList";
 import axios, { AxiosResponse } from "axios";
 import { useEffect, useState } from "react";
 import Loading from "@/components/Loading";
+import ProductForm from "@/components/ProductForm";
+import Produto from "@/models/produto";
 
 export default function Home() {
 
@@ -22,7 +24,15 @@ export default function Home() {
   function todoCaso(){
     setIsLoading(false);
   }
-
+  
+  function handleSave(produto: Produto) {
+    setIsLoading(true);
+    axios
+    .post("https://produtos-server.onrender.com/api/produtos", produto)
+    .then(_res => loadProdutos())
+    .catch(err => console.log("Erro ao cadastrar:", err))
+    .finally(() => setIsLoading(false));
+  }
 
   function loadProdutos(){
     setIsLoading(true);
@@ -38,6 +48,7 @@ export default function Home() {
     <>    
        {(isLoading) && (<Loading />)}
          <ProductList produtos = {produtos}/>
+          <ProductForm onSave={handleSave}/>
     </>
   );
 }
